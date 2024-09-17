@@ -8,6 +8,7 @@ const Message = require('../models/message.model');
 // route pour l'URL : localhost:8080/messages/
 router.get('/', function(req, res) {
     console.log('GET /messages/ pour lire tous les messages');
+/*    
     Message.readAll(function(err, data) {
         if (err) {
             res.status(500).send({
@@ -19,6 +20,7 @@ router.get('/', function(req, res) {
             res.render('listeMessages', {titre: titrePage, donnees: data });
         }
     });
+*/    
 });
 
 router.post('/create', function(req, res) {
@@ -27,9 +29,9 @@ router.post('/create', function(req, res) {
     const lenom = req.body.nom;
     const lemessage = req.body.msg;
 
-    if ((!req.boy) || (lenom=="") || (lemessage=="")) {
+    if ((!req.body) || (lenom=="") || (lemessage=="")) {
         console.log('Le contenu ne peut pas être vide !');
-        res.redirect('/contactform');
+        res.redirect('/contact');
     }else {
         console.log(req.body);
 

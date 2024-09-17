@@ -1,4 +1,4 @@
-const db = ('./db.js');
+const db = require('./db.js');
 
 console.log('Je passe dans models/message.model.js')
 
