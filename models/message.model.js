@@ -6,7 +6,7 @@ console.log('Je passe dans models/message.model.js')
 const Message = function(lemessage) {
     this.nom = lemessage.nom;
     this.msg = lemessage.msg;
-    this.date_creation = new Date();
+    //this.date_creation = new Date();
 }
 
 
