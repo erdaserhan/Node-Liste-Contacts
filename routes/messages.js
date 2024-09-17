@@ -10,8 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/create', function(req, res, next) {
-    console.log('POST créer un message');
+    console.log('POST /create pour écrire un message');
 });
 
 module.exports = router;
-
